@@ -7,7 +7,7 @@ namespace Csharp_EnumEComposicao.Entities
     internal class Client
     {
         public string Name { get; set; }
-        public string email { get; set; }
+        public string Email { get; set; }
         public DateTime BirthDate { get; set; }
 
         public Client()
@@ -17,8 +17,17 @@ namespace Csharp_EnumEComposicao.Entities
         public Client(string name, string email, DateTime birthDate)
         {
             Name = name;
-            this.email = email;
+            this.Email = email;
             BirthDate = birthDate;
+        }
+
+        public override string ToString()
+        {
+            return Name
+                + ", ("
+                + BirthDate.ToString("dd/MM/yyyy")
+                + ") - "
+                + Email;
         }
     }
 }
