@@ -18,10 +18,10 @@ namespace Csharp_EnumEComposicao.Entities
         {
         }
 
-        public Order(DateTime moment, Enum status, Client client)
+        public Order(DateTime moment, OrderStatus status, Client client)
         {
             Moment = moment;
-            OrderStatus = status;
+            Status = status;
             Client = client;
         }
 
